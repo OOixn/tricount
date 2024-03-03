@@ -54,3 +54,4 @@ jobs:
         cd workspace && zip -r integrated-work *
         cd ../ && mkdir -p deploy
         mv workspace/integrated-work.zip deploy/TricountSonic.zip
+      shell: bash
