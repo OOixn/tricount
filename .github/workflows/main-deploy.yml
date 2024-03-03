@@ -48,12 +48,9 @@ jobs:
         aws-region: ap-northeast-2
 
     - name: Generate deployment package
-      run:
+      run: |
         mkdir -p workspace
-#        cp scripts/*.sh workspace/
-#        cp appspec.yml workspace/
         cp build/libs/*.jar workspace/
         cd workspace && zip -r integrated-work *
         cd ../ && mkdir -p deploy
-        mv workspace/integrate-work.zip deploy/TricountSonic.zip
-      shell: bash
+        mv workspace/integrated-work.zip deploy/TricountSonic.zip
